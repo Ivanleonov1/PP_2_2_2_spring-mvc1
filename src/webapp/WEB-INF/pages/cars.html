@@ -3,27 +3,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Car</title>
+    <title></title>
+    <style>
+        table, th, td {
+            border: 3px solid;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        tr:hover td {
+            background-color: darkblue;
+        }
+        td {
+        }
+    </style>
 </head>
 <body>
-<h3>Cars</h3>
-<hr>
-<table border="1">
-    <thead>
-    <tr>
-        <th>Model</th>
-        <th>Color</th>
-        <th>series</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="cars:${cars}">
-        <td th:text="${cars.getModel()}"/>
-        <td th:text="${cars.getColor()}"/>
-        <td th:text="${cars.getSeries()}"/>
-    </tr>
-    </tbody>
-</table>
-
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Series</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="car, it : ${cars}">
+            <!--            th:style="${it.odd}? 'font-weight: bold;'">-->
+            <th th:text="${it.index}+1"></th>
+            <td th:text="${car.getModel()}"></td>
+            <td th:text="${car.getColor()}"></td>
+            <td th:text="${car.getSeries()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

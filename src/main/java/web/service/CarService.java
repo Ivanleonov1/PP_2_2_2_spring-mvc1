@@ -1,6 +1,6 @@
-package service;
+package web.service;
 
-import modul.Car;
+import web.modul.Car;
 
 import java.util.List;
 

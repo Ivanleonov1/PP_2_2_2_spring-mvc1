@@ -1,10 +1,9 @@
-package modul;
+package web.modul;
 
 public class Car {
 
     private String model;
     private String color;
-
     private String series;
 
     public Car() {
