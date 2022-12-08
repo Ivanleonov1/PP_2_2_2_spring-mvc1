@@ -1,4 +1,4 @@
-package web.modul;
+package web.module;
 
 public class Car {
 
